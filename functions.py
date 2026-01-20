@@ -58,7 +58,7 @@ class FormatBIDS:
             return path.stat().st_size
         return sum(f.stat().st_size for f in path.rglob('*') if f.is_file())
 
-    def _find_folder_depth(self, base_dir, max_depth=3):
+    def _find_folder_depth(self, base_dir, max_depth=5):
         """
         Identifies the depth at which the actual FreeSurfer data resides.
         """
