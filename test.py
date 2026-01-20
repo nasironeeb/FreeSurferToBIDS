@@ -11,8 +11,6 @@ if __name__ == "__main__":
     BASE = "~/derivatives/"
     SOURCE = BASE + "fsreconall_versionX"
     DESTINATION = BASE + "fsreconall_versionX_formatBIDS"
-    MOVE_FILES = False  # Set to True to move files instead of copying
-    DRY_RUN = False  # Set to True to simulate the operation without making changes
 
-    converter = FormatBIDS(SOURCE, DESTINATION, move_files=MOVE_FILES, dry_run=DRY_RUN)
+    converter = FormatBIDS(SOURCE, DESTINATION)
     converter.run_conversion()
