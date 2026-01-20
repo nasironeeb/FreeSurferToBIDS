@@ -1,0 +1,66 @@
+# ============================================================
+# Git Attributes configuration for FreeSurfer → BIDS Converter
+# ============================================================
+
+# SCM syntax highlighting & preventing 3-way merges
+pixi.lock merge=binary linguist-language=YAML linguist-generated=true
+
+# --- Normalize line endings for text files ---
+# Ensures LF line endings on all platforms
+* text=auto eol=lf
+
+# --- Python source files ---
+*.py      text diff=python
+
+# --- Documentation and Markdown ---
+*.md      text diff=markdown
+*.txt     text
+
+# --- Configuration files ---
+*.json    text
+*.yml     text
+*.yaml    text
+*.ini     text
+*.cfg     text
+*.toml    text
+*.csv     text
+
+# --- Scripts ---
+*.sh      text eol=lf
+*.bash    text eol=lf
+
+# --- Common binary formats (no diff) ---
+*.nii.gz  binary
+*.nii     binary
+*.mgz     binary
+*.mgh     binary
+*.tar.gz  binary
+*.zip     binary
+*.npz     binary
+*.npy     binary
+*.pkl     binary
+
+# --- Images and figures ---
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.svg     text
+*.pdf     binary
+
+# --- Notebooks ---
+*.ipynb   text diff=ipynb
+
+# --- Logs, outputs, and caches (binary or irrelevant) ---
+*.log     text
+*.out     text
+*.err     text
+*.pkl     binary
+*.cache   binary
+
+# --- Git LFS (optional: uncomment if using large files) ---
+# To enable LFS for neuroimaging data, uncomment below:
+# *.nii.gz filter=lfs diff=lfs merge=lfs -text
+# *.mgz    filter=lfs diff=lfs merge=lfs -text
+
+# --- Keep attributes file itself normalized ---
+.gitattributes text eol=lf

@@ -1,5 +1,5 @@
 """
-Test the FreeSurfer to BIDS conversion functionality.
+Examples of converting FreeSurfer files to BIDS format.
 """
 
 from functions import FormatBIDS
